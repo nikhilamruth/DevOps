@@ -2,7 +2,7 @@
 
 ## Steps of Execution
 
-Write the app.py file and a Dockerfile to build the image of the app
+Write the app.py file and a Dockerfile to build the image of the App
 
 ### Command used to build the docker image :
 
