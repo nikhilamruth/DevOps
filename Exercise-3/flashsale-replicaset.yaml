@@ -5,7 +5,7 @@ metadata:
   labels:
     app: flashsale
 spec:
-  replicas: 3  ## Number of replicas (copies of flashsale app) to run
+  replicas: 3
   selector:
     matchLabels:
       app: flashsale
@@ -16,7 +16,8 @@ spec:
     spec:
       containers:
       - name: flashsale-container
-        image: hamshith/flashsale:1.0
+        image: flashsale:1.0
+        imagePullPolicy: Never
         ports:
         - containerPort: 5000
         readinessProbe:
@@ -50,4 +51,4 @@ spec:
   - name: http
     port: 80
     targetPort: 5000
-  type: ClusterIP
+  type: NodePort
